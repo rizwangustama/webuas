@@ -1,0 +1,100 @@
+.toggle-menu {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border-color: transparent;
+    padding:0;
+}
+.toggle-menu span {
+width: 100%;
+    height: 4px;
+    transition: all .3s;
+    background-color: transparent;
+    position: relative;
+    display: block;
+}
+.toggle-menu span:before,
+.toggle-menu span:after {
+content:"";
+width: 100%;
+    height: 4px;
+    background-color: #000;
+    transition: all .3s;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.toggle-menu span:before {
+width:70%;
+}
+
+.toggle-menu span:after {
+top: 18px;
+}
+
+.toggle-menu.active span:before {
+transform: rotate(45deg) translate(9px,4px);
+    width: 100%;
+}
+
+.toggle-menu.active span:after {
+transform: rotate(-45deg) translate(8px,-4px);
+}
+
+.desktop-none {
+display:none;
+}
+
+@media screen and (max-width: 1024px) {
+    .toggle-menu {
+    position: fixed;
+    top:15px;
+    right:15px;
+    }
+
+    .desktop-none {
+    display: block;
+    }
+    .mobile-none {
+    display: none;
+    }
+
+    #primary-menu .logo {
+    padding-left:15px;
+    }
+
+    #primary-menu {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    /* width:calc(100% - 150px); */
+    /* max-width: 300px; */
+    /* padding:20px; */
+    background: #FFF;
+    height: 100vh;
+    top:-100%;
+    transition: all .3s ease-in;
+    }
+
+    #primary-menu.active {
+    top:0;
+    }
+
+    #primary-menu ul {
+    display: block;
+    }
+
+    #primary-menu ul li a {
+    display: block;
+    padding:20px 15px;
+    }
+
+    .satuNav .container .bahasa {
+    top: 20px;
+    right: 80px;
+    background: transparent;
+    }
+}
+

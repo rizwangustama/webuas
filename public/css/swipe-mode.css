@@ -1,0 +1,105 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    padding: 0 20px;
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.swiper-slide {
+    margin-bottom: 50px;
+    border-radius: 5px;
+    height: 400px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.164);
+    overflow: hidden;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#keenam .e-header h1{
+    font-family: gothambold;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.pembungkus {
+    height: 500px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+.pembungkus .konten img{
+    filter: grayscale(100%);
+    width: 100%;
+    height: 324.34;
+    transition: ease all 1s;
+}
+
+.pembungkus .konten img:hover {
+    filter: grayscale(0%);
+    width: 100%;
+    height: 324.34;
+}
+
+.pembungkus .title {
+    padding: 25px;
+    text-align: left;
+}
+
+.pembungkus .title p {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-family: gothamlight;
+    line-height: 40px;
+}
+
+.pembungkus .title h1 {
+    font-family: gothambold;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .swiper-container {
+        padding: 0 20px;
+        width: 90%;
+        height: 100%;
+        margin: 0px auto;
+    }
+
+
+}

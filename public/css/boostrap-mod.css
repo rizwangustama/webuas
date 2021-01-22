@@ -1,0 +1,87 @@
+.carousel-caption h5, .carousel-caption h2, .carousel-caption h1, .carousel-caption p {
+    font-family: Poppins;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0px;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+
+.carousel-caption h5 {
+    font-size: 24px;
+}
+.carousel-caption h2 {
+    font-size: 40px;
+}
+
+.carousel-caption h2 {
+    font-size: 42px;
+    color: #e27026;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+}
+.left {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+}
+.carousel-indicators {
+    margin-left: -4000;
+}
+.carousel-indicators .bulat {
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    border-radius: 100%;
+    border: 1.5px solid white;
+    background: transparent;
+}
+
+.carousel-indicators .active {
+    border: 3px solid white;
+}
+
+.carousel-indicators .bulat .active {
+    border: 3px solid white;
+}
+
+/* ketiga */
+/* mod boostrstap */
+.carousel-caption .text1, .carousel-caption .text2{
+    text-align: center;
+    line-height: 30px;
+}
+.carousel-caption .text1 {
+    font-family: din;
+    font-size: 20px;
+    color: #e27026;
+}
+
+.carousel-caption .text2 {
+    font-family: dinbold;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.carousel-caption button {
+    font-family: dinbold;
+    font-weight: bold;
+    margin-top: 15px;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    width: 150px;
+    height: 39px;
+    background: #e27026;
+}
+
+
+#top-banner .carousel-inner img {
+    height: 590px;
+    width: auto;
+}

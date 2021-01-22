@@ -1,0 +1,22 @@
+@font-face {
+    font-family: din;
+    src: url(../font/din-normal.ttf);
+}
+
+@font-face {
+    font-family: dinlight;
+    src: url(../font/din-light.ttf);
+}
+@font-face {
+    font-family: dinbold;;
+    src: url(../font/din-bold.ttf);
+}
+
+@font-face {
+    font-family: gothamlight;
+    src: url(../font/Gotham-Light.woff2);
+}
+@font-face {
+    font-family: gothambold;
+    src: url(../font/GothamBold.woff2);
+}
