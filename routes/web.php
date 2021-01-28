@@ -11,9 +11,17 @@
 |
 */
 
-Route::resource('/', 'HomeController');
+Route::resource('/', 'Home2Controller');
+
+Route::resource('/home', 'HomeController');
 
 Route::resource('/signature', 'pages\SignaturePageController');
+
+Route::resource('/info', 'pages\InfoPageController');
+
+Route::resource('/our', 'pages\OurPageController');
+
+Route::resource('/social', 'pages\SocialPageController');
 
 Route::prefix('admin')
     ->namespace('Admin')
@@ -23,5 +31,9 @@ Route::prefix('admin')
     Route::resource('/events', 'EventsController');
     Route::resource('/signature', 'SignatureController');
     Route::resource('/investor', 'InvestorController');
-
+    Route::resource('/info', 'InfoController');
+    Route::resource('/social', 'SocialController');
     });
+
+
+Auth::routes();

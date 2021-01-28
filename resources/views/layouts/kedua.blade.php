@@ -9,7 +9,7 @@
                 company (publicly listed with code: ELTY) engaged in property
                 development and related operations.</h4>
               <div>
-                <button type="button">VIEW MORE</button>
+                <a href="{{ url('/info') }}"><button type="button">VIEW MORE</button></a>
               </div>
             </div>
           </div>

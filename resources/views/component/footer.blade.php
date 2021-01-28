@@ -1,7 +1,7 @@
 <footer>
     <div class="img" style="background: url(/image/img/wave-footer.png);"></div>
     <div class="container">
-      <div class="grid">
+      <div class="grid1">
         <div class="colom">
           <div class="konten">
             <p><span>PT Bakrieland Development Tbk</span> is an integrated property company that puts the implementation of good
@@ -39,12 +39,44 @@
           <a href="#">2018 &copy; Copyright PT. Bakrieland Development, Tbk</a>
         </div>
         <ul>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">H.R.I.S</a></li>
-          <li><a href="#">Webmail</a></li>
-          <li><a href="#">Disclaimer</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">H.R.I.S</a></li>
+            <li><a href="#">Webmail</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+            @guest
+            <li>
+                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+
+            @if (Route::has('register'))
+            <li>
+                <a href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+            @endif
+            @else
+            <li>
+                <a href="{{ url('/home') }}" style="color: #E27026">{{ Auth::user()->name }}</a>
+            </li>
+            <li>
+                <a href="{{ url('/home') }}" style="color: #E27026">Dashboard</a>
+            </li>
+            <li>
+                <a href="">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                    </form>
+                </a>
+            </li>
+            @endguest
+         </ul>
       </div>
     </menu>
   </footer>

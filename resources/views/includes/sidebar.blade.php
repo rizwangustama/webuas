@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <img src="{{ url('assets/img/header-logo.png') }}" alt=" Logo" class="brand-image img-circle elevation-3"
+    <a href="{{ url('/') }}" class="brand-link">
+        <img src="{{ url('image/img/logo_bakrieland.webp') }}" alt=" Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">NPNA</span>
+        <span class="brand-text font-weight-light">Backrieland</span>
     </a>
 
     <!-- Sidebar -->
@@ -15,7 +15,7 @@
                     alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Rizwan Gustama</a>
+                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
             </div>
         </div>
 
@@ -45,18 +45,18 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{route('news.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             News
                         </p>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="nav-item">
                     <a href="{{route('events.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-newspaper"></i>
+                        <i class="nav-icon fas fa-tags"></i>
                         <p>
                             Event
                         </p>
@@ -65,7 +65,7 @@
 
                 <li class="nav-item">
                     <a href="{{route('signature.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-newspaper"></i>
+                        <i class="nav-icon fas fa-picture-o"></i>
                         <p>
                             Signature
                         </p>
@@ -73,13 +73,37 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route('investor.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-newspaper"></i>
+                    <a href="{{route('info.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-info-circle"></i>
                         <p>
-                            Investor
+                            Info
                         </p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{route('social.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-camera-retro"></i>
+                        <p>
+                            Social
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <i class="nav-icon fa fa-arrow-left"></i>
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                    </form>
+                </li>
+
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -108,6 +108,109 @@ body {
   margin-right: 5px;
 }
 
+
+/* Responsip navbar*/
+.toggle-menu {
+    width: 32px;
+      height: 32px;
+      background: transparent;
+      border-color: transparent;
+      padding:0;
+}
+.toggle-menu span {
+    width: 100%;
+    height: 4px;
+    transition: all .3s;
+    background-color: transparent;
+    position: relative;
+    display: block;
+  }
+
+  .toggle-menu span:before,
+  .toggle-menu span:after {
+    content:"";
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    transition: all .3s;
+    position: absolute;
+    top:0;
+    right:0;
+  }
+
+  .toggle-menu span:before {
+    width:70%;
+  }
+
+  .toggle-menu span:after {
+    top: 18px;
+  }
+
+  .toggle-menu.active span:before {
+    transform: rotate(45deg) translate(9px,4px);
+      width: 100%;
+  }
+
+  .toggle-menu.active span:after {
+    transform: rotate(-45deg) translate(8px,-4px);
+  }
+
+  .desktop-none {
+    display:none;
+  }
+
+  @media screen and (max-width: 1024px) {
+      .toggle-menu {
+        position: fixed;
+        top:15px;
+        right:15px;
+      }
+
+      .desktop-none {
+        display: block;
+      }
+      .mobile-none {
+        display: none;
+      }
+
+      #primary-menu .logo {
+        padding-left:15px;
+      }
+
+      #primary-menu {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        /* width:calc(100% - 150px); */
+        /* max-width: 300px; */
+        /* padding:20px; */
+        background: #FFF;
+        height: 100vh;
+        top:-100%;
+        transition: all .3s ease-in;
+      }
+
+      #primary-menu.active {
+        top:0;
+      }
+
+      #primary-menu ul {
+        display: block;
+      }
+
+      #primary-menu ul li a {
+        display: block;
+        padding:20px 15px;
+      }
+
+      .satuNav .container .bahasa {
+        top: 20px;
+        right: 80px;
+        background: transparent;
+      }
+    }
+
 .satu {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.9);
@@ -627,7 +730,7 @@ footer .container {
   width: 93%;
 }
 
-footer .container .grid {
+footer .container .grid1 {
   display: grid;
   margin-top: 70px;
   margin-bottom: 20px;
@@ -635,34 +738,34 @@ footer .container .grid {
   column-gap: 20px;
 }
 
-footer .container .grid .colom {
+footer .container .grid1 .colom {
   color: #888787;
 }
 
-footer .container .grid .colom p {
+footer .container .grid1 .colom p {
   font-family: dinlight;
   font-weight: lighter;
   font-size: 15px;
   line-height: 30px;
 }
 
-footer .container .grid .colom p span {
+footer .container .grid1 .colom p span {
   font-family: dinbold;
   font-weight: bold;
 }
 
-footer .container .grid .colom img {
+footer .container .grid1 .colom img {
   width: 400px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
 }
 
-footer .container .grid .colom .row1 {
+footer .container .grid1 .colom .row1 {
   display: flex;
 }
 
-footer .container .grid .colom .row1 i {
+footer .container .grid1 .colom .row1 i {
   color: #e27026;
   margin-right: 10px;
 }
@@ -721,36 +824,36 @@ footer menu .container2 ul li a {
     margin: auto;
     width: 93%;
   }
-  footer .container .grid {
+  footer .container .grid1 {
     display: grid;
     margin-top: 70px;
     margin-bottom: 20px;
     grid-template-columns: 1fr;
     column-gap: 20px;
   }
-  footer .container .grid .colom {
+  footer .container .grid1 .colom {
     color: #888787;
   }
-  footer .container .grid .colom p {
+  footer .container .grid1 .colom p {
     font-family: dinlight;
     font-weight: lighter;
     font-size: 15px;
     line-height: 30px;
   }
-  footer .container .grid .colom p span {
+  footer .container .grid1 .colom p span {
     font-family: DinBold;
     font-weight: bold;
   }
-  footer .container .grid .colom img {
+  footer .container .grid1 .colom img {
     width: 400px;
     display: flex;
     margin: 0 auto;
     justify-content: center;
   }
-  footer .container .grid .colom .row1 {
+  footer .container .grid1 .colom .row1 {
     display: flex;
   }
-  footer .container .grid .colom .row1 i {
+  footer .container .grid1 .colom .row1 i {
     color: #e27026;
     margin-right: 10px;
   }
@@ -789,17 +892,500 @@ footer menu .container2 ul li a {
     padding-top: 110px;
 }
 
+.content1
+{
+    padding-top: 110px;
+}
+
 
 /* Page Signature */
+
 #page-signature{
-  
+
 }
 
-#page-signature .container1 {
-  width: 90%;
+/* #page-signature .container3 {
+  width: 95%;
   margin: auto;
+} */
+
+#page-signature .container3 .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
-#page-signature .container1 .grid {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+#page-signature .container3 .grid .colom {
+    width: 100%;
+    height: 300px;
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: ease all 1s;
+
+}
+
+#page-signature .container3 .grid .colom:hover {
+    color: #fff;
+    filter: brightness(0.7);
+}
+
+
+#page-signature .container3 .grid .colom h1 {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 150px;
+}
+
+#page-signature .container3 .grid .colom h2 {
+    text-align: center;
+}
+
+/* pages Info */
+
+
+
+
+#breadcrumb .container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+#breadcrumb {
+    background-image: url(../image/pageinfo/img/parallaxGambar.jpg);
+    min-height: 200px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#breadcrumb .container .conten {
+    padding: 100px 0;
+    align-items: center;
+    margin: 0 auto;
+}
+#breadcrumb p,
+#breadcrumb h2 {
+    text-align: center;
+    font-family: gothambold;
+    color: white;
+}
+
+#isi{
+    background: #2D3E50;;
+}
+
+#isi .container4{
+    margin: auto;
+    width: 92%;
+    padding: 100px 0;
+}
+
+#isi .container4 .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-areas:
+        'konten konten gambar gambar'
+        'konten konten gambar1 gambar2'
+        'poto poto1 kontenku kontenku'
+        'poto2 poto3 kontenku kontenku';
+
+}
+
+/* .grid .item {
+    background: brown;
+} */
+
+#isi .container4 .grid .item h4, .grid .item h1, .grid .item h4, .grid .item h5, .grid .item p {
+    /* background: brown; */
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+}
+
+#isi .container4 .grid .item h5 {
+    font-family: gothambold;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+#isi .container4 .grid .item h4 {
+    font-family: gothambold;
+
+}
+
+#isi .container4 .grid .item h1 {
+    font-size: 40px;
+    font-family: gothambold;
+    line-height: 60px;
+    letter-spacing: 13px;
+
+}
+
+#isi .container4 .grid .item p {
+    font-family: dinlight;
+}
+
+#isi .container4 .grid .item h4 {
+    font-size: 20px;
+
+}
+#isi .container4 .grid .item h5 {}
+
+
+#isi .container4 .grid .konten{
+    grid-area: konten;
+}
+
+#isi .container4 .grid .gambar{
+    grid-area: gambar;
+    background-image: url(../image/pageinfo/img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#isi .container4 .grid .gambar1{
+    grid-area: gambar1;
+    background-image: url(../image/pageinfo/img/2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#isi .container4 .grid .gambar2{
+    grid-area: gambar2;
+    background-image: url(../image/pageinfo/img/3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#isi .container4 .grid .poto{
+    grid-area: poto;
+    background-image: url(../image/pageinfo/img/4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#isi .container4 .grid .poto1{
+    grid-area: poto1;
+    background-image: url(../image/pageinfo/img/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#isi .container4 .grid .poto2{
+    grid-area: poto2;
+    background-image: url(../image/pageinfo/img/6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#isi .container4 .grid .poto3{
+    grid-area: poto3;
+    background-image: url(../image/pageinfo/img/7.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#isi .container4 .grid .kontenku{
+    grid-area: kontenku;
+    display: flex;
+}
+
+#isi .container4 .grid .kontenku .isi-konten {
+    height: 200px;
+    margin: auto;
+    align-items: center;
+    padding: auto;
+}
+
+#isi .container4 .grid .kontenku .isi-konten p{
+    color: white;
+    font-family: dinlight;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#company .container4 {
+    margin: auto;
+    width: 92%;
+    padding: 100px 0;
+}
+
+#company .container4 .grid-company {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+#company .container4 .grid-company .kota {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#company .container4 .grid-company .colom-kota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#company .container4 .grid-company .colom1 h1,
+#company .container4 .grid-company .colom1 p{
+    font-family: gothambold;
+}
+#company .container4 .grid-company .colom1 h1{
+    letter-spacing: 7px;
+}
+#company .container4 .grid-company .colom1 p{
+    color: grey;
+}
+/* #company .container4 .grid-company .colom-kota .isi-kota:hover {
+    border-radius: 100px;
+    border: 5px solid #E3722A;
+} */
+
+#company .container4 .grid-company .colom-kota .isi-kota p {
+    font-family: gothambold;
+    font-size: 18px;
+    color: grey;
+}
+
+#company .container4 .grid-company .colom-kota .isi-kota .image img {
+    margin: 20px 0px;
+    margin: auto;
+    width: 85px;
+}
+
+#company .container4 .grid-company .colom-kota .isi-kota .image {
+    border-radius: 100px;
+    margin: 15px 0px;
+    border: 5px solid transparent;
+    transition: ease all 1s;
+}
+
+#company .container4 .grid-company .colom-kota .isi-kota .image:hover {
+    border-radius: 100px;
+    border: 5px solid  #E3722A;
+}
+
+#company .container4 .grid-company .colom-kota .isi-kota p {
+    text-align: center;
+}
+
+
+
+/* Page Our */
+
+#breadcrumb1 .container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+#breadcrumb1 {
+    background-image: url(../image/pageour/parallaxour.jpg);
+    min-height: 200px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#breadcrumb1 .container .conten {
+    padding: 100px 0;
+    align-items: center;
+    margin: 0 auto;
+}
+#breadcrumb1 p,
+#breadcrumb1 h2 {
+    text-align: center;
+    font-family: gothambold;
+    color: white;
+}
+
+
+#our .container4{
+    margin: auto;
+    width: 92%;
+    padding: 100px 0;
+}
+
+#our .container4 .griding {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: 400px;
+    column-gap: 40px;
+
+}
+
+#our .container4 .griding .colom1-satu{
+    background: url(../image/pageour/imagekonten.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#our .container4 .griding .colom1 p{
+    line-height: 27px;
+    font-family: din;
+    text-align: justify;
+}
+
+#our .container4 .isi p {
+    margin-top: 40px;
+    font-family: din;
+    line-height: 27px;
+    text-align: justify;
+}
+
+
+#breadcrumb-social {
+    background-image: url(../image/pagesocial/paralaxheader.jpg);
+    min-height: 200px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#breadcrumb-social .container .conten {
+    padding: 100px 0;
+    align-items: center;
+    margin: 0 auto;
+}
+#breadcrumb-social p,
+#breadcrumb-social h2 {
+    text-align: center;
+    font-family: gothambold;
+    color: white;
+}
+
+
+#social {
+    background: #2D3E50;
+}
+
+#social .container4 {
+    margin: auto;
+    width: 92%;
+    padding: 100px 0;
+}
+
+#social .container4 .grid-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    grid-template-areas:
+        'konten konten'
+        'artikel1 gambar'
+        'kontenku1 koko';
+}
+
+.row-social1 {
+    grid-area: konten;
+
+}
+
+.row-social1 p {
+    font-family: din;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    color: white;
+
+}
+
+.row-social2 {
+    grid-area: artikel1;
+}
+
+.row-social2 h1,
+.row-social2 p,
+.row-social2 li {
+    font-family: din;
+    text-align: justify;
+    color: white;
+    line-height: 30px;
+}
+
+.row-social2 h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.row-social2 li {
+    padding: 20px 0;
+    color: white;
+    font-weight: bold;
+}
+
+.row-social3 {
+    background: url(../image/pagesocial/gambarkonten.jpg);
+    grid-area: gambar;
+
+}
+
+.row-social4 {
+    grid-area: kontenku1;
+}
+
+.row-social4 h1,
+.row-social5 h1,
+.row-social5 p,
+.row-social4 p {
+    font-family: din;
+    text-align: justify;
+    color: white;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+}
+
+.row-social4 h1, .row-social5 h1 {
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+.row-social5 {
+    grid-area: koko;
+}
+#breadcrumb-foot .container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+#breadcrumb-foot {
+    background-image: url(../image/pagesocial/parallax.jpg);
+    min-height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#breadcrumb-foot .isi .gridku {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 150px);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+#breadcrumb-foot .isi {
+    padding: 100px 0;
+    width: 100%;
+}
+
+#breadcrumb-foot .container .isi .gridku .colomku {
+    background: url(../image/img/ketujuh2.png);
+    background-position: center;
+    background-size: cover;
 }

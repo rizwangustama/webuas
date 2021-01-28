@@ -13,9 +13,10 @@
 
     @include('layouts.kelima')
 
-    @include('layouts.keenam')
+    {{-- @include('layouts.keenam') --}}
 
     @include('layouts.keenam2')
+
 
     @include('layouts.ketujuh')
 
